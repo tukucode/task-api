@@ -1,5 +1,5 @@
 {
-  "name": "node-sample-api",
+  "name": "taks-api",
   "version": "1.0.0",
   "main": "index.ts",
   "scripts": {
