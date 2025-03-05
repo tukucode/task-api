@@ -19,12 +19,12 @@ app.use(
 app.use(express.json({limit: '1mb'}));
 app.use(express.urlencoded({limit: '1mb', extended: true}));
 
+app.use('/welcome', (_, res: Response) => {
+  sendResponse(res, 200, "Welcome to Tukucode", null)
+})
+
 // service api version 1
 app.use('/api/v1', [taskRoutes]);
-
-app.use('/', (_, res: Response) => {
-  sendResponse(res, 200, "Hello World", [])
-})
 
 // Handling route not found
 app.all("*", (_, res: Response) => {
