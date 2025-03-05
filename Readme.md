@@ -82,6 +82,10 @@ Runs the compiled JavaScript files from the `dist` directory using Node.js.
 │   ├── lib           # Derectory global for utlis and constants
 │   └── types         # Define type taks model
 ├── dist              # Compiled JavaScript (after running build)
+├── .env.example
+├── .gitignore
+├── .dockerignore
+├── Dockerfile
 ├── package.json
 ├── tsconfig.json
 └── README.md
