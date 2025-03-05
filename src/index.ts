@@ -1,5 +1,5 @@
 import cors from 'cors'
-import express, { type Request, type Response } from 'express';
+import express, { type Response } from 'express';
 
 import { PORT, BASE_URL_ORIGIN } from './lib/constants'
 import { sendResponse } from './lib/utils'
@@ -21,6 +21,10 @@ app.use(express.urlencoded({limit: '1mb', extended: true}));
 
 // service api version 1
 app.use('/api/v1', [taskRoutes]);
+
+app.use('/', (_, res: Response) => {
+  sendResponse(res, 200, "Hello World", [])
+})
 
 // Handling route not found
 app.all("*", (_, res: Response) => {
