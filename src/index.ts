@@ -4,7 +4,7 @@ import express, { type Response } from 'express';
 import { PORT, BASE_URL_ORIGIN } from './lib/constants'
 import { sendResponse } from './lib/utils'
 
-import taskRoutes from './routes/tasks';
+import taskRoutes from './routes/task';
 
 const app = express();
 
