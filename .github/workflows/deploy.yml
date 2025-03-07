@@ -39,6 +39,7 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_CHAT_ID }}  # ID Grup
           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}  # Token Bot
+          message_thread_id: ${{ secrets.TELEGRAM_TOPIC_ID }}  # ID Room Topic
           message: |
             ✅ *Deployment Sukses!* 🚀
             Repository: ${{ github.repository }}
