@@ -33,6 +33,7 @@ jobs:
             docker compose pull ${{ secrets.DOCKER_COMPOSE_SERVICE_NAME }}
             docker compose stop ${{ secrets.DOCKER_COMPOSE_SERVICE_NAME }}
             docker compose up -d ${{ secrets.DOCKER_COMPOSE_SERVICE_NAME }}
+            docker system prune -af
 
       - name: Send Telegram Notification
         uses: appleboy/telegram-action@v1.0.0
